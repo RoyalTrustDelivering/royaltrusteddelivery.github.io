@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Royal Trust Delivering Company Inc.</title>
+  <meta name="description" content="Royal Trust Delivering Company Inc. — Delivering Trust Worldwide. Track parcels, view services, and contact our support team.">
+  <style>
+    :root{--brand:#6f2fa6;--white:#ffffff;--muted:#f4f4f6;--text:#2b2b2b}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:var(--white)}
+    header{background:linear-gradient(90deg,var(--brand),#8a4ee0);color:var(--white);padding:28px 20px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px}
+    .tag{opacity:0.95;font-size:14px}
+    nav{margin-top:14px}
+    nav a{color:var(--white);margin-right:18px;text-decoration:none;font-weight:600}
+    .hero{display:flex;gap:20px;align-items:center;padding:48px 0}
+    .hero-left{flex:1}
+    .hero h2{margin:0;font-size:32px}
+    .hero p{margin:12px 0 20px;color:#fffde6;max-width:620px}
+    .cta{background:var(--white);color:var(--brand);padding:12px 18px;border-radius:8px;font-weight:700;text-decoration:none}
+    .card{background:var(--muted);padding:18px;border-radius:10px}
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .service{background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(16,10,30,0.04)}
+    footer{padding:20px;background:#faf7ff;color:#2b2b2b}
+    h3{margin:0 0 10px 0}
+
+    /* Tracking card */
+    .track-card{background:var(--white);padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(16,10,30,0.06)}
+    input[type=text]{width:100%;padding:12px;border-radius:6px;border:1px solid #e6e2f2}
+    button{cursor:pointer;padding:10px 14px;border-radius:6px;border:0;background:var(--brand);color:#fff;font-weight:700}
+    .result{margin-top:14px;padding:12px;border-radius:6px;background:#fbf7ff;border:1px solid #f0e6ff}
+    .muted{color:#6b6b6b;font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .hero{flex-direction:column} .brand h1{font-size:18px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div style="width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;font-weight:800">RT</div>
+        <div>
+          <h1>Royal Trust Delivering Company Inc.</h1>
+          <div class="tag">Delivering Trust Worldwide — London, United Kingdom</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#track">Track My Parcel</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Fast. Secure. Reliable.</h2>
+        <p>Your parcels are handled with care by Royal Trust Delivering Company Inc. — trusted logistics for businesses and individuals worldwide. Use our tracking tool to check status instantly.</p>
+        <a class="cta" href="#track">Track Your Parcel</a>
+      </div>
+      <div style="width:420px">
+        <div class="card">
+          <h3>Why choose Royal Trust</h3>
+          <ul class="muted">
+            <li>International network and transparent tracking</li>
+            <li>Secure handling and verified delivery confirmations</li>
+            <li>24/7 customer support — +44 20 7946 0012</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="track" style="margin-top:18px">
+      <div class="grid">
+        <div>
+          <h3>Track My Parcel</h3>
+          <p class="muted">Enter your tracking code (e.g., RT001) to view the latest status from our records.</p>
+          <div class="track-card">
+            <label for="code" class="muted">Tracking Code</label>
+            <input id="code" type="text" placeholder="Enter tracking code like RT001">
+            <div style="height:12px"></div>
+            <button id="trackBtn">Track</button>
+            <div id="result" class="result" style="display:none"></div>
+            <div class="muted" style="margin-top:10px">Note: Replace the SAMPLE_SHEET_ID in the script with your Google Sheet ID and set sheet to "Anyone with link - Viewer".</div>
+          </div>
+        </div>
+        <aside>
+          <div class="card">
+            <h3>Services</h3>
+            <div class="services" style="margin-top:8px">
+              <div class="service">Express Delivery</div>
+              <div class="service">International Shipping</div>
+              <div class="service">Corporate Logistics</div>
+            </div>
+            <h3 style="margin-top:14px">Pricing</h3>
+            <p class="muted">Competitive rates tailored for business and consumer needs. Contact sales for corporate pricing.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <h3>About Us</h3>
+      <p class="muted">Royal Trust Delivering Company Inc. is a London-based logistics company committed to secure, timely, and transparent parcel delivery. Since our founding, we have focused on reliability and practical solutions that serve businesses and individuals across continents. Our tracking tools, customer support, and partner networks ensure your goods travel safely.</p>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="grid">
+        <div>
+          <h3>Contact</h3>
+          <p class="muted">Questions? Reach our customer support or send a message using the contact form.</p>
+          <p><strong>Email:</strong> royaltrustdeliveringcompany@gmail.com<br><strong>Phone:</strong> +44 20 7946 0012</p>
+          <div class="card">
+            <form id="contactForm">
+              <label class="muted">Full name</label>
+              <input type="text" id="cname" required>
+              <div style="height:8px"></div>
+              <label class="muted">Email</label>
+              <input type="text" id="cemail" required>
+              <div style="height:8px"></div>
+              <label class="muted">Message</label>
+              <textarea id="cmessage" style="width:100%;height:100px;border-radius:6px;border:1px solid #eee;padding:8px"></textarea>
+              <div style="height:8px"></div>
+              <button type="submit">Send Message</button>
+            </form>
+            <div id="contactResult" style="display:none;margin-top:10px" class="muted"></div>
+          </div>
+        </div>
+        <aside>
+          <div class="card">
+            <h3>Legal</h3>
+            <p class="muted"><a href="#terms">Terms of Service</a><br><a href="#privacy">Privacy Policy</a></p>
+            <h3 style="margin-top:12px">Headquarters</h3>
+            <p class="muted">London, United Kingdom</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="terms" style="margin-top:28px">
+      <h3>Terms of Service (Summary)</h3>
+      <p class="muted">Use of this site and our services is subject to terms: accurate shipment information, lawful use, payment of fees, and claims filed within specified periods. This summary is not a substitute for the full Terms of Service available on request.</p>
+    </section>
+
+    <section id="privacy" style="margin-top:18px">
+      <h3>Privacy Policy (Summary)</h3>
+      <p class="muted">We collect basic personal information and shipment details to provide and improve services. We do not sell personal data. For full policy, contact our support email.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© <strong>Royal Trust Delivering Company Inc.</strong> — Delivering Trust Worldwide</div>
+        <div class="muted">Built for demonstration. Replace sheet ID & contact details before going live.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple tracker that reads CSV exported from Google Sheets
+    // Steps: 1) In your sheet: File > Share > Anyone with link (Viewer)
+    // 2) Get the sheet ID from the share link and replace SAMPLE_SHEET_ID below
+    // 3) Use: https://docs.google.com/spreadsheets/d/SAMPLE_SHEET_ID/export?format=csv&gid=0
+
+    const SHEET_ID = 'SAMPLE_SHEET_ID'; // << REPLACE THIS
+    const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+
+    const parseCSV = (text) => {
+      const rows = text.trim().split('\n');
+      return rows.map(row => row.split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/).map(cell => cell.replace(/^\"|\"$/g, '').trim()));
+    }
+
+    async function fetchSheet(){
+      try{
+        const res = await fetch(CSV_URL);
+        if(!res.ok) throw new Error('Sheet fetch failed');
+        const text = await res.text();
+        const data = parseCSV(text); // array of rows
+        const headers = data.shift().map(h=>h.toLowerCase());
+        const objects = data.map(r=>{
+          const obj = {};
+          headers.forEach((h,i)=>obj[h]=r[i]||'');
+          return obj;
+        });
+        return objects;
+      }catch(e){
+        console.warn('Could not fetch sheet',e);
+        return null;
+      }
+    }
+
+    document.getElementById('trackBtn').addEventListener('click', async ()=>{
+      const code = document.getElementById('code').value.trim();
+      const resultEl = document.getElementById('result');
+      resultEl.style.display='none';
+      if(!code){ resultEl.style.display='block'; resultEl.textContent='Please enter a tracking code.'; return }
+      resultEl.textContent='Searching…'; resultEl.style.display='block';
+      const rows = await fetchSheet();
+      if(!rows){ resultEl.textContent='Tracking system not configured. Replace SAMPLE_SHEET_ID in script with your Google Sheet ID and make sheet viewable.'; return }
+      const found = rows.find(r => (r['tracking code']||'').toLowerCase() === code.toLowerCase());
+      if(!found){ resultEl.textContent=`No record found for ${code}. Please check the code and try again.`; return }
+      resultEl.innerHTML = `\n        <strong>Tracking Code:</strong> ${found['tracking code']}<br>
+        <strong>Status:</strong> ${found['status']||'N/A'}<br>
+        <strong>Last Updated:</strong> ${found['last updated']||'N/A'}<br>
+        <strong>Recipient:</strong> ${found['customer name']||'N/A'}<br>
+        <strong>Destination:</strong> ${found['destination']||'N/A'}\n      `;
+    });
+
+    // Simple contact form handler (mailto fallback)
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const message = document.getElementById('cmessage').value.trim();
+      const out = document.getElementById('contactResult');
+      if(!name||!email||!message){ out.style.display='block'; out.textContent='Please fill all fields.'; return }
+      // For now we use mailto as placeholder
+      const subject = encodeURIComponent('Website Contact — ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:${encodeURIComponent('royaltrustdeliveringcompany@gmail.com')}?subject=${subject}&body=${body}`;
+      out.style.display='block'; out.textContent='Opening your email client to send the message. Alternatively, copy your message and email support.';
+    });
+  </script>
+</body>
+</html>
